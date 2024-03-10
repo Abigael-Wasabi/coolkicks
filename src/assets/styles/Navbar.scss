@@ -1,0 +1,169 @@
+
+@mixin flex() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+nav {
+    @include flex();
+    gap: 100px;
+    padding: 40px 200px;
+
+    #logo {
+        height: 70px;
+        border-radius: 50%
+    }
+
+    ul {
+        @include flex();
+        li {
+            a {
+                font-size: 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: #4e4b4b;
+            }
+        }
+    }
+
+    .btn1 {
+        a {
+            background-color: #120f0b;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-color: #DDE0DC;
+                color: #120f0b;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .btn2 {
+        a {
+            padding: 10px;
+            background-color: #fff;
+            color: #120f0b;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                background-color: #DDE0DC;
+                color: #120f0b;
+                text-decoration: underline;
+            }
+        }
+    }
+    .cartIcon {
+        margin-right: 40px;
+        img {
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        z-index: 103;
+        .bar {
+            background-color: #120f0b;
+            width: 20px;
+            height: 3px;
+            display: block;
+            margin: 5px;
+            transition: 0.7s ease-in-out;
+        }
+    }
+}
+
+.hr {
+    padding: 0 200px;
+}
+
+@media screen and (max-width: 600px) {
+   nav {
+    gap: 10px;
+    padding: 20px;
+
+    #logo {
+        height: 50px;
+    }
+    .navMenu {
+        z-index: 100;
+        position: fixed;
+        left: -900px;
+        top: 0px;
+        display: block;
+        text-align: center;
+        background-color: #fff;
+        padding: 100px 10px 500px 10px;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+        &.active {
+            left: 0;
+        }
+
+        li {
+            margin: 16px 0;
+            a {
+                color: #030302;
+            }
+        }
+    }
+    .buttons {
+        z-index: 101;
+        position: fixed;
+        left: -900px;
+        padding: 0 20px;
+        top: 250px;
+        display: block;
+        text-align: center;
+        width: 80%;
+        transition: 0.7s ease-in-out;
+        &.active {
+            left: 40px;
+        }
+        button {
+            width: 100%;
+        }
+
+        .cartIcon {
+            position: fixed;
+            // right: 10px;
+            top: 15px;
+        }
+
+        .login {
+            background-color: #00aaff;
+        }
+        .signup {
+            &:hover {
+                background-color: #000;
+            }
+        }
+
+        li {
+            margin: 16px 0;
+        }
+    }
+
+    .hamburger {
+        display: block;
+
+        &.active {
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+   }
+}

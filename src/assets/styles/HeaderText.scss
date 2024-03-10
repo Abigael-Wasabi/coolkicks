@@ -1,0 +1,52 @@
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    h5 {
+        color: #943F05;
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    p {
+        color: rgb(53, 55, 58);
+        margin: 20px 0;
+    }
+    a {
+        background-color: #943F05;
+        width: 50%;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #fff;
+        padding: 15px 20px;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h5 {
+        font-size: 16px !important;
+    }
+    h1 {
+        font-size: 30px !important;
+        span {
+            display: none;
+        }
+    }
+    p {
+        margin: 10px 0 !important;
+    }
+
+    a {
+        padding: 10px !important;
+    }
+}

@@ -1,0 +1,116 @@
+
+.home-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    article {
+        padding: 10px;
+        border-radius: 10px;
+        height: 130px;
+        margin-top: 100px;
+        a {
+            background-color: transparent;
+        }
+
+        h4 {
+            font-size: 14px;
+        }
+        .product {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        figure {
+            display: flex;
+            justify-content: space-between;
+            p {
+                color: #000;
+            }
+            img {
+                cursor: pointer;
+                height: 20px;
+            }
+        }
+        #product1, #product2, #product3, #product4 {
+            position: relative;
+            bottom: 50px;
+            cursor: pointer;
+        }
+    }
+
+    .black {
+        background-color: #fa5656;
+        h4,figure {
+            position: relative;
+            bottom: 30px;
+
+        }
+    }
+    .brown {
+        background-color: #f1ac6e;
+        h4,figure {
+            position: relative;
+            bottom: 30px;
+
+        }
+    }
+    .white {
+        background-color: rgb(253, 190, 73);
+        h4,figure {
+            position: relative;
+            bottom: 30px;
+        }
+    }
+    .blue {
+        background-color: salmon;
+        h4,figure {
+            position: relative;
+            bottom: 30px;
+        }
+    }
+    .yellow {
+        background-color: beige;
+        h4,figure {
+            position: relative;
+            bottom: 30px;
+        }
+    }.beige {
+        background-color: pink;
+        h4,figure {
+            position: relative;
+            bottom: 30px;
+        }
+    }
+}
+.cart-btn {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .home-products {
+        padding: 40px 0;
+        article {
+            height: 100px;
+            .product {
+                height: 70px;
+            }
+            #product1, #product2, #product3, #product4, #product5, #product6{
+                top: -40px;
+            }
+            h4 {
+                font-size: 14px;
+            }
+            p {
+                font-weight: lighter;
+            }
+        }
+        .black, .brown,.white, .blue , .yellow, .beige{
+            h4,figure {
+                top: -40px !important;
+            }
+        }
+    }
+}

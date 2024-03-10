@@ -1,0 +1,42 @@
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    .thumbnails {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        img {
+            height: 100px;
+            width: 100%;
+            cursor: pointer;
+            border: 1px solid orange;
+            background-color: burlywood;
+            border-radius: 15px;
+
+            &.active {
+                filter: blur(2px); 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .images {
+        .thumbnails {
+            align-items: flex-start;
+            img {
+                height: 50px;
+            }
+        }
+        .main-images {
+            img {
+                height: 300px;
+            }
+        }
+    }
+}
