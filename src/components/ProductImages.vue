@@ -56,7 +56,8 @@ import image11 from '@/assets/images/blunt.jpg';
 import image12 from '@/assets/images/mahon.jpg';
 import { ref } from 'vue';
 
-const active = ref([true, false, false])
+// const active = ref([true, false, false, false, false, false, false, false, false, false, false,false, false, false, false])
+const active = ref(Array(15).fill(false));
 function toggleActive(index) {
     active.value = active.value.map((value,i) => i === index)
 }

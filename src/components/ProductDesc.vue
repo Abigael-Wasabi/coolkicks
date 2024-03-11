@@ -1,7 +1,7 @@
 <template>
     <section class="product-desc">
         <h5 style="text-align: center;">At one's Disposal</h5>
-        <h1 style="text-align: center;"><span></span>CoolKicks<span>16.0</span></h1>
+        <h1 style="text-align: center;"><span>{{ productName }}</span>CoolKicks<span>16.0</span></h1>
         <article class="sizes">
             <h3 style="text-align: center;">Pick a Size</h3>
             <figure style="text-align: center;">
@@ -23,9 +23,11 @@
             </button>
         </article>
         <article class="cart">
-            <button style="margin: 0 auto;" class="addToCart">Add To Cart</button>
+            <button onclick=""
+            style="margin: 0 auto;" class="addToCart">Add To Cart</button>
             <p v-if="count > 0">Total: <span>${{ total }}</span></p>
         </article>
+        <!-- <img :src="selectedImage" alt="Product Image" class="main-image"> -->
     </section>
 </template>
 
@@ -33,8 +35,17 @@
 import { ref } from 'vue';
 import '@/assets/styles/ProductDesc.scss'
 
+const productName = ref('yeezys'); //default product name
+const selectedImage = ref('purple.jpg'); //default selected image
+
+const handleImageSelected = (index) => {
+  // Updatingproduct info based on the selected thumbnail index
+  productName.value = ''; //corresponding product name
+  selectedImage.value = ''; //the selected image path
+};
+
 const count = ref(0);
-const active = ref([true, false, false, false, false, false]);
+const active = ref([true, false, false, false, false, false,false, false, false, false, false, false, false, false, false]);
 var total = 0;
 
 function increment() {
@@ -52,3 +63,11 @@ function toggle(index) {
 }
 </script>
 
+<style scoped>
+.main-image {
+  max-width: 100px; 
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+</style>

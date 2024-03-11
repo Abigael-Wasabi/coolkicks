@@ -1,4 +1,4 @@
-<template>
+   <template>
     <div class="cart-container">
       <h2>Your Shopping Cart</h2>
       <div v-if="cartItems.length === 0">
@@ -23,19 +23,34 @@
           <p>Subtotal: ${{ calculateSubtotal() }}</p>
           <router-link to="/checkout">Proceed to Checkout</router-link>
         </div>
+        <FooterView/>
       </div>
     </div>
   </template>
   
   <script>
+  import FooterView from '../components/FooterView.vue';
+  import YeezySlide from '../assets/images/yellow.jpg';
+  import Jordan1 from '../assets/images/mahon.jpg';
+  import boots from '../assets/images/gray.jpg';
+  import J4 from'../assets/images/blunt.jpg';
+  import J3 from'../assets/images/red.jpg';
+  
   export default {
     data() {
       return {
         cartItems: [
-          { id: 1, name: "Sneaker 1", price: 50, quantity: 2, image: "sneaker1.jpg" },
-          { id: 2, name: "Sneaker 2", price: 60, quantity: 1, image: "sneaker2.jpg" }
+        { id: 1, name: "Yeezy Slide", price: 50, quantity: 2, image: YeezySlide },
+        { id: 2, name: "Jordan 1", price: 60, quantity: 1, image: Jordan1 },
+        { id: 2, name: "Jordan 1", price: 6701, quantity: 1, image: boots},
+        { id: 2, name: "Jordan 1", price: 9310, quantity: 1, image: J4 },
+        { id: 2, name: "Jordan 1", price: 9310, quantity: 1, image: J3 },
+
         ]
       };
+    },
+    components: {
+      FooterView
     },
     methods: {
       removeItem(itemId) {
