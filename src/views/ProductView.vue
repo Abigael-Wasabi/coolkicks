@@ -12,7 +12,7 @@ import ProductImages from '../components/ProductImages.vue';
 import FooterView from '../components/FooterView.vue'
 </script>
 
-<style scoped>
+<!-- <style scoped>
 .about {
   display: flex;
   justify-content: center;
@@ -27,4 +27,4 @@ import FooterView from '../components/FooterView.vue'
     align-items: flex-center;
   }
 }
-</style>
+</style> -->

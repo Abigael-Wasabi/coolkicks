@@ -77,3 +77,21 @@ export default {
     name: 'HomeProducts'
 }
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+    .home-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-products {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+</style>

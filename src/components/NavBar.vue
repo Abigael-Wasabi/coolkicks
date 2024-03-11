@@ -16,7 +16,9 @@
       </ul>
       <ul :class="{active: active, buttons: true}">
         <li class="cartIcon">
+          <RouterLink to="/cart">
           <img src="@/assets/images/cart.png"  alt="cart-icon">
+        </RouterLink>
         </li>
         <li @click="unToggle" class="btn1">
           <RouterLink to="/signup" class="signup">Signup</RouterLink>
@@ -62,3 +64,4 @@
     },
   };
   </script>
+

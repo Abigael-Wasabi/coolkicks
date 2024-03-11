@@ -1,7 +1,7 @@
 <template>
  <h1 class="font-bold mt-6" style="text-align: center;">Drop us a line</h1>
 
-   <a target='_blank' href="mailto:techtonic@gmail.com" rel="noreferrer" style="display: flex; align-items: center;">
+   <a target='_blank' href="mailto:coolkicks254@gmail.com" rel="noreferrer" style="display: flex; align-items: center;">
           <span style="margin-left: 200px; color: salmon;"><FontAwesomeIcon :icon="faEnvelope" size="3x" /></span>
                     <span style="margin-left: 30px; color: black">coolkicks254@gmail.com</span>
         </a><br>

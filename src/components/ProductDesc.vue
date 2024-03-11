@@ -1,10 +1,10 @@
 <template>
     <section class="product-desc">
-        <h5>At one's Disposal</h5>
-        <h1><span></span>CoolKicks<span>16.0</span></h1>
+        <h5 style="text-align: center;">At one's Disposal</h5>
+        <h1 style="text-align: center;"><span></span>CoolKicks<span>16.0</span></h1>
         <article class="sizes">
-            <h3>Pick a Size</h3>
-            <figure>
+            <h3 style="text-align: center;">Pick a Size</h3>
+            <figure style="text-align: center;">
                 <button :class="{active: active[0], btn: true}" @click="toggle(0)">7</button>
                 <button :class="{active: active[1], btn: true}" @click="toggle(1)">8</button>
                 <button :class="{active: active[2], btn: true}" @click="toggle(2)">9</button>
@@ -23,7 +23,7 @@
             </button>
         </article>
         <article class="cart">
-            <button class="addToCart">Add To Cart</button>
+            <button style="margin: 0 auto;" class="addToCart">Add To Cart</button>
             <p v-if="count > 0">Total: <span>${{ total }}</span></p>
         </article>
     </section>
@@ -51,3 +51,4 @@ function toggle(index) {
     active.value = active.value.map((value, i) => i === index);
 }
 </script>
+

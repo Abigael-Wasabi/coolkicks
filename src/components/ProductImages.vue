@@ -14,6 +14,8 @@
             <img v-if="active[10]" :src="image8" alt="yellow">
             <img v-if="active[11]" :src="image9" alt="navy">
             <img v-if="active[12]" :src="image10" alt="plain">
+            <img v-if="active[13]" :src="image11" alt="blunt">
+            <img v-if="active[14]" :src="image12" alt="mahon">
         </article>
         <article class="thumbnails">
             <img :src="thumb1" :class="{active: active[0], thumnail: true}" @click="toggleActive(0)" alt="purple">
@@ -29,6 +31,8 @@
             <img :src="image8" :class="{active: active[10], thumnail: true}" @click="toggleActive(10)" alt="yellow">
             <img :src="image9" :class="{active: active[11], thumnail: true}" @click="toggleActive(11)" alt="navy">
             <img :src="image10" :class="{active: active[12], thumnail: true}" @click="toggleActive(12)" alt="plain">
+            <img :src="image11" :class="{active: active[13], thumnail: true}" @click="toggleActive(13)" alt="blunt">
+            <img :src="image12" :class="{active: active[14], thumnail: true}" @click="toggleActive(14)" alt="mahon">
         </article>
     </section>
 </template>
@@ -48,6 +52,8 @@ import image7 from '@/assets/images/green.jpg';
 import image8 from '@/assets/images/yellow.jpg';
 import image9 from '@/assets/images/navy.jpg';
 import image10 from '@/assets/images/plain.jpg';
+import image11 from '@/assets/images/blunt.jpg';
+import image12 from '@/assets/images/mahon.jpg';
 import { ref } from 'vue';
 
 const active = ref([true, false, false])
@@ -56,3 +62,26 @@ function toggleActive(index) {
 }
 
 </script>
+
+
+<!-- <template>
+    <ProductSlider/>
+</template>
+
+<script>
+import ProductSlider from './ProductSlider.vue'
+
+export default {
+    name: 'App',
+    components: {
+        ProductSlider
+    }
+}
+</script>
+
+<style scoped>
+  body{
+    margin: 0;
+  }
+  *{box-sizing: border-box;}
+</style> -->
